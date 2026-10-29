@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
-import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput } from "react-native";
 import { db } from "../../firebaseConfig";
 
 export default function Cadastrar() {
@@ -39,19 +39,19 @@ export default function Cadastrar() {
       <Text style={styles.titulo}>Cadastrar filme</Text>
 
       <Text style={styles.label}>Nome do filme:</Text>
-      <TextInput style={styles.input} value={nome} onChangeText={setNome} placeholder="Ex.: Toy Story" />
+      <TextInput style={styles.input} value={nome} onChangeText={setNome}/>
 
       <Text style={styles.label}>Ano de lançamento:</Text>
-      <TextInput style={styles.input} value={ano} onChangeText={setAno} placeholder="Ex.: 1995" keyboardType="numeric" />
+      <TextInput style={styles.input} value={ano} onChangeText={setAno}/>
 
       <Text style={styles.label}>Idade indicativa:</Text>
-      <TextInput style={styles.input} value={idade} onChangeText={setIdade} placeholder="Ex.: Livre, 10, 12, 14, 16 ou 18" />
+      <TextInput style={styles.input} value={idade} onChangeText={setIdade}/>
 
       <Text style={styles.label}>Gênero:</Text>
-      <TextInput style={styles.input} value={genero} onChangeText={setGenero} placeholder="Ex.: Animação" />
+      <TextInput style={styles.input} value={genero} onChangeText={setGenero}/>
 
       <Text style={styles.label}>Diretor:</Text>
-      <TextInput style={styles.input} value={diretor} onChangeText={setDiretor} placeholder="Nome do diretor" />
+      <TextInput style={styles.input} value={diretor} onChangeText={setDiretor}/>
 
       <Pressable style={styles.botao} onPress={salvar}>
         <Text style={styles.textoBotao}>Salvar filme</Text>
